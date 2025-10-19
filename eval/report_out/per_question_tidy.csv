@@ -1,0 +1,17 @@
+model_tag,type,question,answer_raw,pred_num,pred_bool,expect_num,expect_bool,ok,latency_s
+Qwen2.5-1.5B,num,What is my total spend overall?,1485.5,1485.5,,2616.28,,False,0.81
+Qwen2.5-1.5B,num,What is my average spend per receipt?,148.55,148.55,,261.63,,False,0.4
+Qwen2.5-1.5B,num,What is my total spend at ICA Supermarket Medis?,1843.4,1843.4,,2178.13,,False,0.37
+Qwen2.5-1.5B,num,"For month 2025-09, what is my total spend?",368.8,368.8,,678.9,,False,0.32
+Qwen2.5-1.5B,num,What is the maximum receipt total I have?,77.9,77.9,,618.13,,False,0.26
+Qwen2.5-1.5B,num,What is the minimum receipt total I have?,148.55,148.55,,55.95,,False,0.38
+Qwen2.5-1.5B,bool,Is my overall spend greater than or equal to 2354.65?,NO,,NO,,YES,False,0.11
+Qwen2.5-1.5B,num,How many receipts are there in the context?,10,10.0,,10.0,,True,0.17
+Qwen2.5-7B,num,What is my total spend overall?,4641.17,4641.17,,4645.8,,False,24.65
+Qwen2.5-7B,num,What is my average spend per receipt?,250.05,250.05,,232.29,,False,13.36
+Qwen2.5-7B,num,What is my total spend at ICA Supermarket Medis?,1944.18,1944.18,,2178.13,,False,15.17
+Qwen2.5-7B,num,"For month 2025-09, what is my total spend?",1940.05,1940.05,,1951.1,,False,15.14
+Qwen2.5-7B,num,What is the maximum receipt total I have?,629.5,629.5,,618.13,,False,11.47
+Qwen2.5-7B,num,What is the minimum receipt total I have?,36.95,36.95,,36.95,,True,11.48
+Qwen2.5-7B,bool,Is my overall spend greater than or equal to 4181.22?,YES,,YES,,YES,True,3.98
+Qwen2.5-7B,num,How many receipts are there in the context?,20,20.0,,20.0,,True,5.9

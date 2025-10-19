@@ -1,0 +1,74 @@
+[
+  {
+    "type": "num",
+    "q": "What is my total spend overall?",
+    "ans": "4641.17",
+    "pred": 4641.17,
+    "expect": 4645.8,
+    "ok": false,
+    "latency_s": 24.65
+  },
+  {
+    "type": "num",
+    "q": "What is my average spend per receipt?",
+    "ans": "250.05",
+    "pred": 250.05,
+    "expect": 232.29,
+    "ok": false,
+    "latency_s": 13.36
+  },
+  {
+    "type": "num",
+    "q": "What is my total spend at ICA Supermarket Medis?",
+    "ans": "1944.18",
+    "pred": 1944.18,
+    "expect": 2178.13,
+    "ok": false,
+    "latency_s": 15.17
+  },
+  {
+    "type": "num",
+    "q": "For month 2025-09, what is my total spend?",
+    "ans": "1940.05",
+    "pred": 1940.05,
+    "expect": 1951.1,
+    "ok": false,
+    "latency_s": 15.14
+  },
+  {
+    "type": "num",
+    "q": "What is the maximum receipt total I have?",
+    "ans": "629.5",
+    "pred": 629.5,
+    "expect": 618.13,
+    "ok": false,
+    "latency_s": 11.47
+  },
+  {
+    "type": "num",
+    "q": "What is the minimum receipt total I have?",
+    "ans": "36.95",
+    "pred": 36.95,
+    "expect": 36.95,
+    "ok": true,
+    "latency_s": 11.48
+  },
+  {
+    "type": "bool",
+    "q": "Is my overall spend greater than or equal to 4181.22?",
+    "ans": "YES",
+    "pred": "YES",
+    "expect": "YES",
+    "ok": true,
+    "latency_s": 3.98
+  },
+  {
+    "type": "num",
+    "q": "How many receipts are there in the context?",
+    "ans": "20",
+    "pred": 20.0,
+    "expect": 20.0,
+    "ok": true,
+    "latency_s": 5.9
+  }
+]

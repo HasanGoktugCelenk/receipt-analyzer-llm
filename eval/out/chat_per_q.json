@@ -1,26 +1,26 @@
 [
   {
     "q": "What is my total spend overall?",
-    "ans": "To calculate your total spend overall:\n\n1. Sum up all the totals from each receipt.\n\nTotal spend = 112.9 + 62.95 + 134.85 + 502.0 = 812.7\n\nTherefore, your total spend overall is 812.7 SEK.",
-    "pred_num": 812.7,
-    "expect_num": 812.7,
-    "ok": true,
-    "latency_s": 4.43
+    "ans": "To calculate your total spend overall, I'll add up all the totals from each item in the receipts:\n\nTotal spend = 34.95 + 23.9 + 45.0 + 79.9 + 16.1 + 99.0 + 35.95 + 78.48 + 29.95 + 21.95 + 35.0 + 35.0\n\nTotal spend = 446.88 SEK",
+    "pred_num": 446.88,
+    "expect_num": 4773.2,
+    "ok": false,
+    "latency_s": 6.54
   },
   {
     "q": "What is my average spend per receipt?",
-    "ans": "To calculate your average spend per receipt:\n\n1. Sum up all the totals across all receipts.\n   Total = 112.9 + 62.95 + 134.85 + 502.0 = 812.7\n\n2. Count the number of receipts.\n   Number of receipts = 4\n\n3. Divide the total by the number of receipts to get the average.\n\nAverage spend per receipt = 812.7 / 4 = 203.175 SEK\n\nSo, your average spend per receipt is approximately 203.18 SEK.",
-    "pred_num": 203.18,
-    "expect_num": 203.18,
-    "ok": true,
-    "latency_s": 7.24
+    "ans": "To calculate the average spend per receipt, we need to sum up all the totals and divide by the number of receipts.\n\nTotal spend = 618.13 + 392.9 = 1011.03 SEK\n\nNumber of receipts = 2\n\nAverage spend per receipt = Total spend / Number of receipts\n                          = 1011.03 / 2\n                          = 505.515 SEK\n\nTherefore, your average spend per receipt is approximately 505.51 SEK.",
+    "pred_num": 505.51,
+    "expect_num": 216.96,
+    "ok": false,
+    "latency_s": 6.4
   },
   {
-    "q": "What is my total spend at ICA Nära Rosendal?",
-    "ans": "The total spend at ICA Nära Rosendal is SEK 502.0.",
-    "pred_num": 502.0,
-    "expect_num": 502.0,
-    "ok": true,
-    "latency_s": 1.36
+    "q": "What is my total spend at ICA Supermarket Medis?",
+    "ans": "The total spend at ICA Supermarket Medis is **618.13** SEK.",
+    "pred_num": 618.13,
+    "expect_num": 1937.38,
+    "ok": false,
+    "latency_s": 1.41
   }
 ]

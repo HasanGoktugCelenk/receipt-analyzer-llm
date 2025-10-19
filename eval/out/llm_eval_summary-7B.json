@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n_numeric": 7,
+  "numeric_accuracy": 0.286,
+  "n_bool": 1,
+  "bool_accuracy": 1.0,
+  "latency_mean_s": 12.64,
+  "latency_p50_s": 12.42,
+  "latency_p95_s": 21.33,
+  "limit_context_receipts": 20,
+  "meta": {
+    "top_store": "ICA Supermarket Medis",
+    "recent_month": "2025-09",
+    "threshold": 4181.22
+  }
+}

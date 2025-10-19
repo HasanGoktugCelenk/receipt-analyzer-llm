@@ -7,7 +7,9 @@ from typing import Dict
 
 import gradio as gr
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
+import torch
+
 
 # Import from database.py
 from db import (
@@ -22,7 +24,15 @@ from parser import Receipt, extract_from_pdf, extract_from_image
 from utils import read_file_bytes
 
 # ---------------- Config ----------------
-CHAT_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
+CHAT_MODEL = "Qwen/Qwen2.5-7B-Instruct"
+
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_use_double_quant=True,
+    # Try bfloat16 first (Ampere+ GPUs). If you get an error, switch to torch.float16.
+    bnb_4bit_compute_dtype=torch.bfloat16,
+)
 
 SYSTEM_PROMPT = (
     "You are a helpful assistant for Swedish shopping receipts. "
@@ -57,21 +67,21 @@ MAX_CTX_JSON_CHARS = 2048
 tokenizer = AutoTokenizer.from_pretrained(CHAT_MODEL, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(
     CHAT_MODEL,
-    device_map="auto",          # GPU if available, else CPU
-    torch_dtype="auto",
-    low_cpu_mem_usage=True
+    trust_remote_code=True,
+    quantization_config=bnb_config,
+    device_map="auto",
+    low_cpu_mem_usage=True,
 )
 
+# Keep the same variable name `chat` used elsewhere
 chat = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
-    max_new_tokens=512,
-    do_sample=True,
-    temperature=0.2,
-    top_p=0.9,
+    max_new_tokens=256,        # 192–256 is plenty for your app
+    do_sample=False,           # deterministic & better for numbers
+    return_full_text=False,    # avoids having to slice off the prompt
 )
-
 
 # Build context
 def build_context() -> str:
