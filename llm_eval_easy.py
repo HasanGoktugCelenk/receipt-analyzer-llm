@@ -1,14 +1,3 @@
-# llm_eval_easy.py — minimal LLM evaluation on your receipts DB (no parser needed)
-# - Computes ground truth with SQL
-# - Asks the LLM the same questions
-# - Scores numeric & YES/NO accuracy
-# - Saves CSV/JSON and plots to eval/out/
-#
-# Usage:
-#   python llm_eval_easy.py --model Qwen/Qwen2.5-1.5B-Instruct --limit 20
-# Optional:
-#   python llm_eval_easy.py --model Qwen/Qwen2.5-0.5B-Instruct --limit 50
-
 import os, json, time, argparse, math, sqlite3
 from statistics import mean
 import matplotlib.pyplot as plt
