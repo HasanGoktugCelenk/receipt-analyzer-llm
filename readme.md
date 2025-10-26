@@ -1,66 +1,38 @@
-# HOW TO INSTALL AND RUN
+# Receipt Analyzer LLM
 
-## Installation Steps
-
-### 1. Change directory to the project
-```bash
-cd path/to/your/project
-```
-
-### 2. Create virtual environment
-```bash
-# Use Python 3
-python3 -m venv venv
-
-# Or use Python 3.12
-python3.12 -m venv venv
-```
-
-### 3. Activate virtual environment
-**On Windows:**
-```bash
-venv\Scripts\activate
-```
-
-**On macOS/Linux:**
-```bash
-source venv/bin/activate
-```
-
-### 4. Install dependencies
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### 5. Run the app
-```bash
-python App.py
-```
-
-### 6. Access the app
-Open your browser and go to:
-```
-http://127.0.0.1:7860
-```
+**Receipt Analyzer LLM** is an AI-powered application that uses **Qwen 2.5** models to extract and analyze shopping receipts.  
+It parses receipts from PDF or image files, stores them in a database, and allows users to ask natural language questions about their spending, stores, or items.
 
 ---
 
-## Troubleshooting
+## Overview
 
-### Check Python Version
+The system combines document parsing, structured storage, and large language model reasoning.  
+Users can upload receipts, automatically extract information, and interact with their data through a Gradio-based chat interface.
+
+---
+
+## Features
+
+- Receipt extraction from PDF and image files  
+- Qwen2.5-1.5B and Qwen2.5-7B LLM support for reasoning  
+- Local SQLite database for structured storage  
+- Natural language queries about spend, stores, and items  
+- Off-topic question filtering  
+- Comparative evaluation of model accuracy and latency  
+
+---
+
+## Installation
+
 ```bash
-python --version
-```
-If it shows 3.14, try to use `python3.12` or `python3.11` instead.
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/receipt-analyzer-llm.git
+cd receipt-analyzer-llm
 
-```bash
-python3 App.py # instead of python App.py
-```
+# (Optional) create virtual environment
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
 
-### First Run Notes
-- **First run will be slow** - the app downloads:
-  - TinyLlama model (~2.2GB)
-  - EasyOCR models for Swedish and English (~200MB total)
-- **GPU recommended** for faster performance
-- **Memory requirements**: At least 4-6GB free RAM
+# Install dependencies
+pip install -r requirements.txt
